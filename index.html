@@ -28,15 +28,18 @@
       font-weight: 500;
     }
     header .btn {
-      background: orange;
+      background: #e67e22; /* Naranja oscuro */
       color: #fff;
       padding: 10px 20px;
       border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
     }
+    .logo img {
+      height: 50px;
+    }
     .hero {
-      background: url('img/hero.png') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1524492449090-1a065f1ab07d') center/cover no-repeat;
       height: 80vh;
       display: flex;
       align-items: center;
@@ -47,7 +50,7 @@
     }
     .hero h1 { font-size: 3rem; margin: 0; }
     .hero p { font-size: 1.2rem; margin: 15px 0; }
-    .hero a { background: orange; color: #fff; padding: 12px 25px; border-radius: 25px; text-decoration: none; }
+    .hero a { background: #e67e22; color: #fff; padding: 12px 25px; border-radius: 25px; text-decoration: none; }
     section { padding: 60px 40px; text-align: center; }
     .services, .benefits {
       display: grid;
@@ -71,12 +74,14 @@
       text-align: center;
       padding: 20px;
     }
-    footer a { color: orange; margin: 0 10px; text-decoration: none; }
+    footer a { color: #e67e22; margin: 0 10px; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><img src="img/logo.png" alt="SERVI PRINT" style="height:40px;"></div>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Servi Print">
+    </div>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
@@ -87,12 +92,14 @@
     <a href="#contacto" class="btn">Cotiza Ahora</a>
   </header>
 
+  <!-- Hero -->
   <section class="hero" id="inicio">
     <h1>Impresión de calidad para tu negocio</h1>
     <p>Lonas, flyers, tarjetas y más con entrega rápida y garantizada</p>
     <a href="#productos">Ver Productos</a>
   </section>
 
+  <!-- Servicios -->
   <section id="servicios">
     <h2>Servicios Destacados</h2>
     <div class="services">
@@ -103,25 +110,20 @@
     </div>
   </section>
 
+  <!-- Portafolio -->
   <section id="portafolio" class="portfolio">
     <h2>Nuestro Portafolio</h2>
     <div class="services">
-      <img src="img/img1.png" alt="Ejemplo de impresión">
-      <img src="img/img2.png" alt="Ejemplo de tarjetas">
-      <img src="img/img3.png" alt="Ejemplo de flyers">
+      <img src="images/portafolio1.jpg" alt="Ejemplo impresión">
+      <img src="images/portafolio2.jpg" alt="Ejemplo tarjetas">
+      <img src="images/portafolio3.jpg" alt="Ejemplo flyers">
+      <img src="images/ia1.jpg" alt="Diseño IA imprenta">
+      <img src="images/ia2.jpg" alt="Creativo IA impresión">
+      <img src="images/ia3.jpg" alt="Portafolio IA imprenta">
     </div>
   </section>
 
-  <section id="beneficios">
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="benefits">
-      <div class="card"><h3>🕒 Entrega rápida</h3></div>
-      <div class="card"><h3>🎨 Diseños creativos</h3></div>
-      <div class="card"><h3>💯 Calidad garantizada</h3></div>
-      <div class="card"><h3>💵 Precios competitivos</h3></div>
-    </div>
-  </section>
-
+  <!-- Contacto -->
   <section id="contacto">
     <h2>Contáctanos</h2>
     <p>Escríbenos y recibe tu cotización personalizada</p>
