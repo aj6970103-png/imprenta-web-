@@ -8,62 +8,66 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
       color: #333;
     }
     header {
-      background: #ff6600;
+      background: linear-gradient(135deg, #ff6600, #ff3300);
       color: white;
-      padding: 20px;
+      padding: 100px 20px;
       text-align: center;
     }
     header img {
-      height: 80px;
+      height: 90px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     nav {
       background: #222;
-      padding: 10px;
+      padding: 12px;
       display: flex;
       justify-content: center;
+      gap: 20px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
     nav a:hover {
       color: #ff6600;
     }
-    .container {
-      width: 90%;
+    section {
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 20px 0;
     }
     h2 {
       text-align: center;
-      margin: 40px 0 20px;
       color: #ff6600;
+      margin-bottom: 40px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .card {
-      background: white;
+      background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
+      padding: 20px;
     }
     .card img {
       max-width: 100%;
-      border-radius: 8px;
-    }
-    .card h3 {
-      margin: 10px 0 5px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
     footer {
       background: #222;
@@ -75,35 +79,54 @@
 </head>
 <body>
 
+  <!-- Portada -->
   <header>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACAAAAAahCAYAAAAw2GomAAAQAElEQVR4AezdBXxV9f/H8ffZKOmU7pASVEAQRWmUMFCwOxHlpyAW..." alt="ServiPrint Logo">
+    <img src="https://via.placeholder.com/150x90.png?text=LOGO" alt="ServiPrint Logo">
     <h1>ServiPrint</h1>
     <p>Tu taller gráfico favorito</p>
   </header>
 
+  <!-- Menú -->
   <nav>
     <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <div class="container" id="productos">
-    <h2>Productos</h2>
+  <!-- Productos -->
+  <section id="productos">
+    <h2>Productos Destacados</h2>
     <div class="grid">
       <div class="card">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARoAAAD6CAYAAAB+gIiMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMA..." alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Desde $9,99</p>
+        <img src="https://via.placeholder.com/400x250.png?text=Taza+Personalizada" alt="Tazas">
+        <h3>Tazas Personalizadas</h3>
+        <p>Desde $4,99</p>
       </div>
       <div class="card">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAb0AAAJYCAYAAAD2TzjoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMA..." alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Desde $14,99</p>
+        <img src="https://via.placeholder.com/400x250.png?text=Tarjetas+Visita" alt="Tarjetas">
+        <h3>Tarjetas de Presentación</h3>
+        <p>Desde $17,99</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250.png?text=Lonas+Impresas" alt="Lonas">
+        <h3>Lonas Publicitarias</h3>
+        <p>Desde $6,99</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <footer id="contacto">
-    <p>© 2025 ServiPrint - Quito, Carapungo</p>
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p style="text-align:center; font-size:1.1rem;">
+      📍 Quito – Carapungo <br>
+      📞 WhatsApp: +593 987 654 321 <br>
+      ✉️ contacto@serviprint.com
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ServiPrint - Todos los derechos reservados</p>
   </footer>
 
 </body>
