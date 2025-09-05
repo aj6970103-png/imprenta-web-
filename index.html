@@ -3,76 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiPrint - Tu taller gráfico favorito</title>
+  <title>ServiPrint - Impresiones y Diseño</title>
   <style>
     /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      line-height: 1.6;
-      background: #f9f9f9;
+      background: #fff;
       color: #333;
+      line-height: 1.6;
     }
 
-    header {
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #ff6600cc, #000000cc), url('https://picsum.photos/1600/900?random=1') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero a {
+      display: inline-block;
       background: #ff6600;
       color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.3rem;
-    }
-
-    nav {
-      margin-top: 0.5rem;
-    }
-
-    nav a {
-      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .hero a:hover {
+      background: #e55a00;
     }
 
+    /* Secciones */
     .container {
       max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
+      margin: auto;
+      padding: 2rem 1rem;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 1rem;
       color: #ff6600;
+      margin-bottom: 2rem;
     }
 
-    .cards {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
     .card {
-      background: white;
-      padding: 1.5rem;
+      background: #fafafa;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
       text-align: center;
       transition: transform 0.2s;
     }
@@ -81,83 +89,92 @@
       transform: translateY(-5px);
     }
 
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    /* Contacto */
+    .contacto {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contacto p {
+      margin: 0.5rem 0;
+    }
+
+    /* Footer */
     footer {
-      background: #222;
-      color: white;
+      background: #111;
+      color: #aaa;
       text-align: center;
       padding: 1.5rem;
       margin-top: 2rem;
     }
 
     footer p {
-      margin: 5px 0;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>ServiPrint</h1>
-    <p>Tu taller gráfico favorito</p>
-    <nav>
-      <a href="#productos">Productos</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Bienvenido a ServiPrint</h1>
+    <p>Impresión digital, corte láser y diseño gráfico en un solo lugar</p>
+    <a href="#productos">Ver productos</a>
+  </section>
 
-  <div class="container">
-    <!-- Productos -->
-    <section id="productos">
-      <h2>Productos</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Lonas Personalizadas</h3>
-          <p>Impresión en alta calidad para interiores y exteriores.</p>
-        </div>
-        <div class="card">
-          <h3>Tazas Personalizadas</h3>
-          <p>Diseños únicos para regalar o promocionar tu marca.</p>
-        </div>
-        <div class="card">
-          <h3>Tarjetas de Presentación</h3>
-          <p>Profesionales y personalizadas para tu negocio.</p>
-        </div>
+  <!-- Productos -->
+  <section class="container" id="productos">
+    <h2>Productos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Lonas Personalizadas</h3>
+        <p>Resistentes y en alta calidad para interiores y exteriores.</p>
       </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios">
-      <h2>Servicios</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Impresión Digital</h3>
-          <p>Calidad superior en todos tus proyectos gráficos.</p>
-        </div>
-        <div class="card">
-          <h3>Corte Láser</h3>
-          <p>Precisión y acabados profesionales en tus diseños.</p>
-        </div>
-        <div class="card">
-          <h3>Diseño Gráfico</h3>
-          <p>Creatividad e innovación para destacar tu marca.</p>
-        </div>
+      <div class="card">
+        <h3>Tazas Personalizadas</h3>
+        <p>Un regalo perfecto para sorprender o promocionar tu marca.</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Tarjetas de Presentación</h3>
+        <p>Elegantes, profesionales y totalmente personalizadas.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p style="text-align:center;">📍 Dirección: Quito, Ecuador</p>
-      <p style="text-align:center;">📞 Teléfono: +593 99 999 9999</p>
-      <p style="text-align:center;">✉️ Email: contacto@serviprint.com</p>
-    </section>
-  </div>
+  <!-- Servicios -->
+  <section class="container" id="servicios">
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Impresión Digital</h3>
+        <p>Máxima calidad para todos tus proyectos.</p>
+      </div>
+      <div class="card">
+        <h3>Corte Láser</h3>
+        <p>Precisión en detalles y acabados profesionales.</p>
+      </div>
+      <div class="card">
+        <h3>Diseño Gráfico</h3>
+        <p>Creatividad para dar vida a tus ideas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="container contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Quito, Ecuador</p>
+    <p>📞 +593 99 999 9999</p>
+    <p>✉️ contacto@serviprint.com</p>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ServiPrint. Todos los derechos reservados.</p>
+    <p>&copy; 2025 ServiPrint - Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
-
