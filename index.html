@@ -3,100 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imprenta ServiPrint</title>
+  <title>ServiPrint - Tu taller gr√°fico favorito</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
+
+    body {
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
     header {
       background: #ff6600;
       color: white;
-      padding: 20px;
+      padding: 1rem 2rem;
       text-align: center;
     }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
     nav {
-      background: #333;
-      padding: 10px;
-      text-align: center;
+      margin-top: 0.5rem;
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 10px;
       font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
     section {
-      padding: 40px;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
       text-align: center;
+      margin-bottom: 1rem;
+      color: #ff6600;
     }
-    .productos {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
+
     .card {
-      border: 1px solid #ddd;
+      background: white;
+      padding: 1.5rem;
       border-radius: 8px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     footer {
-      background: #333;
+      background: #222;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
     <h1>ServiPrint</h1>
-    <p>Tu taller gr·fico favorito</p>
+    <p>Tu taller gr√°fico favorito</p>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#productos">Productos</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="productos">
-    <h2>Productos</h2>
-    <div class="productos">
-      <div class="card">
-        <h3>Lonas Personalizadas</h3>
-        <p>ImpresiÛn en alta calidad para interiores y exteriores.</p>
+  <div class="container">
+    <!-- Productos -->
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Lonas Personalizadas</h3>
+          <p>Impresi√≥n en alta calidad para interiores y exteriores.</p>
+        </div>
+        <div class="card">
+          <h3>Tazas Personalizadas</h3>
+          <p>Dise√±os √∫nicos para regalar o promocionar tu marca.</p>
+        </div>
+        <div class="card">
+          <h3>Tarjetas de Presentaci√≥n</h3>
+          <p>Profesionales y personalizadas para tu negocio.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Tazas Personalizadas</h3>
-        <p>DiseÒos ˙nicos para regalar o promocionar tu marca.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Impresi√≥n Digital</h3>
+          <p>Calidad superior en todos tus proyectos gr√°ficos.</p>
+        </div>
+        <div class="card">
+          <h3>Corte L√°ser</h3>
+          <p>Precisi√≥n y acabados profesionales en tus dise√±os.</p>
+        </div>
+        <div class="card">
+          <h3>Dise√±o Gr√°fico</h3>
+          <p>Creatividad e innovaci√≥n para destacar tu marca.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Tarjetas de PresentaciÛn</h3>
-        <p>Profesionales y personalizadas para tu negocio.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <p>Ofrecemos impresiÛn digital, corte l·ser y diseÒo gr·fico.</p>
-  </section>
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p style="text-align:center;">üìç Direcci√≥n: Quito, Ecuador</p>
+      <p style="text-align:center;">üìû Tel√©fono: +593 99 999 9999</p>
+      <p style="text-align:center;">‚úâÔ∏è Email: contacto@serviprint.com</p>
+    </section>
+  </div>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: contacto@serviprint.com</p>
-    <p>TelÈfono: +593 999 999 999</p>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>© 2025 ServiPrint - Todos los derechos reservados</p>
+    <p>&copy; 2025 ServiPrint. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
+
