@@ -1,232 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SERVI PRINT - Imprenta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fafafa;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    header nav a:hover {
-      color: #f39c12;
-    }
-    header .btn {
-      background: #e67e22;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    header .btn:hover {
-      background: #d35400;
-    }
-    .logo img {
-      height: 55px;
-    }
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('https://images.unsplash.com/photo-1524492449090-1a065f1ab07d') center/cover no-repeat;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #fff;
-      text-align: center;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-    }
-    .hero h1 { 
-      font-size: 3.2rem; 
-      margin: 0; 
-      font-family: 'Comfortaa', cursive;
-    }
-    .hero p { 
-      font-size: 1.3rem; 
-      margin: 15px 0; 
-    }
-    .hero a { 
-      background: #e67e22; 
-      color: #fff; 
-      padding: 14px 28px; 
-      border-radius: 35px; 
-      text-decoration: none; 
-      font-weight: bold; 
-      transition: background 0.3s;
-    }
-    .hero a:hover { background: #d35400; }
-    section { 
-      padding: 70px 40px; 
-      text-align: center; 
-    }
-    h2 {
-      font-family: 'Comfortaa', cursive;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #e67e22;
-    }
-    .services, .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .portfolio img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .portfolio img:hover {
-      transform: scale(1.05);
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      font-family: inherit;
-    }
-    button {
-      background: #e67e22;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #d35400;
-    }
-    footer {
-      background: #1a1a1a;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-    }
-    footer a { 
-      color: #e67e22; 
-      margin: 0 10px; 
-      text-decoration: none; 
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: #f39c12;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo Servi Print">
-    </div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <a href="#contacto" class="btn">Cotiza Ahora</a>
-  </header>
+<!-- 🔹 Sección de Contacto -->
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Escríbenos y recibe tu cotización personalizada</p>
 
-  <!-- Hero -->
-  <section class="hero" id="inicio">
-    <h1>Impresión de calidad con estilo</h1>
-    <p>Lonas, flyers, tarjetas y más con un toque profesional y cercano</p>
-    <a href="#portafolio">Ver Portafolio</a>
-  </section>
+  <div class="contact-info">
+    <p>📞 <a href="https://wa.me/593987654321" target="_blank">+593 987 654 321</a></p>
+    <p>📧 <a href="mailto:contacto@serviprint.com">contacto@serviprint.com</a></p>
+    <p>📍 Quito, Ecuador</p>
+  </div>
 
-  <!-- Servicios -->
-  <section id="servicios">
-    <h2>Servicios Destacados</h2>
-    <div class="services">
-      <div class="card"><h3>Lonas publicitarias</h3><p>Resistentes y de alta definición.</p></div>
-      <div class="card"><h3>Tarjetas personalizadas</h3><p>Diseños únicos para tu marca.</p></div>
-      <div class="card"><h3>Volantes & Flyers</h3><p>Promoción efectiva y económica.</p></div>
-      <div class="card"><h3>Corte láser & sublimación</h3><p>Personaliza al máximo tus productos.</p></div>
-    </div>
-  </section>
+  <form>
+    <input type="text" placeholder="Nombre" required><br><br>
+    <input type="email" placeholder="Correo" required><br><br>
+    <input type="tel" placeholder="Teléfono"><br><br>
+    <textarea placeholder="Mensaje" rows="4"></textarea><br><br>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
-  <!-- Portafolio -->
-  <section id="portafolio" class="portfolio">
-    <h2>Nuestro Portafolio</h2>
-    <div class="services">
-      <img src="images/portafolio1.jpg" alt="Ejemplo impresión">
-      <img src="images/portafolio2.jpg" alt="Ejemplo tarjetas">
-      <img src="images/portafolio3.jpg" alt="Ejemplo flyers">
-      <img src="images/ia1.jpg" alt="Diseño IA imprenta">
-      <img src="images/ia2.jpg" alt="Creativo IA impresión">
-      <img src="images/ia3.jpg" alt="Portafolio IA imprenta">
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>Escríbenos y recibe tu cotización personalizada</p>
-    <form>
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Correo" required>
-      <input type="tel" placeholder="Teléfono">
-      <textarea placeholder="Mensaje" rows="4"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 SERVI PRINT - Todos los derechos reservados</p>
-    <p>
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">WhatsApp</a>
-    </p>
-  </footer>
-</body>
-</html>
+<!-- 🔹 Footer con Redes Sociales -->
+<footer>
+  <p>© 2025 SERVI PRINT - Todos los derechos reservados</p>
+  <p>
+    <a href="https://facebook.com/serviprint" target="_blank">Facebook</a> |
+    <a href="https://instagram.com/serviprint" target="_blank">Instagram</a> |
+    <a href="https://wa.me/593987654321" target="_blank">WhatsApp</a>
+  </p>
+</footer>
