@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SERVI PRINT - Imprenta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #fff;
+      background: #fafafa;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: #000;
+      background: #1a1a1a;
       color: #fff;
       padding: 15px 40px;
       display: flex;
@@ -20,61 +22,144 @@
       align-items: center;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
     header nav a {
       color: #fff;
       text-decoration: none;
       margin: 0 15px;
       font-weight: 500;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #f39c12;
     }
     header .btn {
-      background: #e67e22; /* Naranja oscuro */
+      background: #e67e22;
       color: #fff;
       padding: 10px 20px;
-      border-radius: 20px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
+    }
+    header .btn:hover {
+      background: #d35400;
     }
     .logo img {
-      height: 50px;
+      height: 55px;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1524492449090-1a065f1ab07d') center/cover no-repeat;
-      height: 80vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1524492449090-1a065f1ab07d') center/cover no-repeat;
+      height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       color: #fff;
       text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
     }
-    .hero h1 { font-size: 3rem; margin: 0; }
-    .hero p { font-size: 1.2rem; margin: 15px 0; }
-    .hero a { background: #e67e22; color: #fff; padding: 12px 25px; border-radius: 25px; text-decoration: none; }
-    section { padding: 60px 40px; text-align: center; }
+    .hero h1 { 
+      font-size: 3.2rem; 
+      margin: 0; 
+      font-family: 'Comfortaa', cursive;
+    }
+    .hero p { 
+      font-size: 1.3rem; 
+      margin: 15px 0; 
+    }
+    .hero a { 
+      background: #e67e22; 
+      color: #fff; 
+      padding: 14px 28px; 
+      border-radius: 35px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      transition: background 0.3s;
+    }
+    .hero a:hover { background: #d35400; }
+    section { 
+      padding: 70px 40px; 
+      text-align: center; 
+    }
+    h2 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #e67e22;
+    }
     .services, .benefits {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
       margin-top: 40px;
     }
     .card {
-      background: #f9f9f9;
-      border-radius: 15px;
+      background: #fff;
+      border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .portfolio img {
       width: 100%;
       border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+    }
+    button {
+      background: #e67e22;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #d35400;
     }
     footer {
-      background: #111;
+      background: #1a1a1a;
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
     }
-    footer a { color: #e67e22; margin: 0 10px; text-decoration: none; }
+    footer a { 
+      color: #e67e22; 
+      margin: 0 10px; 
+      text-decoration: none; 
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #f39c12;
+    }
   </style>
 </head>
 <body>
@@ -85,7 +170,6 @@
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#productos">Productos</a>
       <a href="#portafolio">Portafolio</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -94,9 +178,9 @@
 
   <!-- Hero -->
   <section class="hero" id="inicio">
-    <h1>Impresión de calidad para tu negocio</h1>
-    <p>Lonas, flyers, tarjetas y más con entrega rápida y garantizada</p>
-    <a href="#productos">Ver Productos</a>
+    <h1>Impresión de calidad con estilo</h1>
+    <p>Lonas, flyers, tarjetas y más con un toque profesional y cercano</p>
+    <a href="#portafolio">Ver Portafolio</a>
   </section>
 
   <!-- Servicios -->
@@ -128,10 +212,10 @@
     <h2>Contáctanos</h2>
     <p>Escríbenos y recibe tu cotización personalizada</p>
     <form>
-      <input type="text" placeholder="Nombre" required><br><br>
-      <input type="email" placeholder="Correo" required><br><br>
-      <input type="tel" placeholder="Teléfono"><br><br>
-      <textarea placeholder="Mensaje" rows="4"></textarea><br><br>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <input type="tel" placeholder="Teléfono">
+      <textarea placeholder="Mensaje" rows="4"></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
